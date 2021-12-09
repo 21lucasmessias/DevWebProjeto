@@ -65,7 +65,7 @@ export const Register = () => {
 
     useEffect(() => {
         fillCep()
-    }, [cep])
+    }, [cep, fillCep])
 
     const fillCep = () => {
         let validacep = /^[0-9]{8}$/;
@@ -298,7 +298,7 @@ export const Register = () => {
                     <div className='fieldLine'>
                         <h2>Street</h2>
                         <input
-                            className={`${street.error ? 'error' : ''}` + `${addressDisabled ? 'disabled' : ''}`}
+                            className={`${street.error ? 'error' : ''}${addressDisabled ? ' disabled' : ''}`}
                             placeholder='Street'
                             value={street.value}
                             disabled={addressDisabled}
@@ -308,7 +308,7 @@ export const Register = () => {
                     <div className='fieldLine'>
                         <h2>Neighbour</h2>
                         <input
-                            className={`${neighbour.error ? 'error' : ''}` + `${addressDisabled ? 'disabled' : ''}`}
+                            className={`${neighbour.error ? 'error' : ''}${addressDisabled ? ' disabled' : ''}`}
                             placeholder='Neighbour'
                             value={neighbour.value}
                             disabled={addressDisabled}
@@ -318,7 +318,7 @@ export const Register = () => {
                     <div className='fieldLine'>
                         <h2>City</h2>
                         <input
-                            className={`${city.error ? 'error' : ''}` + `${addressDisabled ? 'disabled' : ''}`}
+                            className={`${city.error ? 'error' : ''}${addressDisabled ? ' disabled' : ''}`}
                             placeholder='City'
                             value={city.value}
                             disabled={addressDisabled}
