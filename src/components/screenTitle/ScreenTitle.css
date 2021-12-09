@@ -1,0 +1,38 @@
+.screenTitle {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.screenTitle > h3 {
+    display: flex;
+    color: #E54B4B;
+}
+
+.screenTitle > .breadcrumb {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: baseline;
+}
+
+.screenTitle > .breadcrumb > div {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: baseline;
+}
+
+.screenTitle > .breadcrumb > h1 {
+    color: #1E1E24;
+}
+
+.screenTitle > .breadcrumb > h2 {
+    color: #1E1E24;
+    cursor: pointer;
+}
+
+.screenTitle > .breadcrumb > .active {
+    color: #E54B4B;
+}

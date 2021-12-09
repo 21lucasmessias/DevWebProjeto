@@ -1,0 +1,70 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+body > #root {
+    display: flex;
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    background-color: #F7EBE8;
+    flex-direction: column-reverse;
+}
+
+html {
+    font-size: 14px;
+}
+
+h1, h2, h3, h4, p, span, input, div, textarea {
+    font-family: 'Poppins', sans-serif;
+    color: #1E1E24;
+    margin: 0px;
+}
+
+p, a  {
+    font-size: 0.5rem;
+    font-weight: 300;
+}
+
+span {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+h1 {
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.mainContainer {
+    display: flex;    
+    flex: 1;
+    padding: 20px;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 500px) {
+    body > #root {
+        flex-direction: row;
+    }
+}

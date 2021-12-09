@@ -1,0 +1,84 @@
+.headerContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    max-width: 100%;
+    padding: 20px;
+    background-color: #1E1E24;
+}
+
+.headerContainer > img {
+    display: none;
+}
+
+.headerContainer > .buttons {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.headerContainer > .buttons > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+}
+
+.headerContainer > .buttons > a > button > h2 {
+    display: none;
+    color: #F7EBE8;
+}
+
+.headerContainer > .buttons > a > button > svg {
+    color: #F7EBE8;
+    font-size: 1.5rem !important;
+}
+
+.headerContainer > .buttons > a > button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background-color: transparent;
+    border: 0px;
+
+    cursor: pointer;
+}
+
+.headerContainer > .buttons > .selected > button > svg {
+    font-size: 1.5rem !important;
+    color: #FFA987;
+}
+
+@media screen and (min-width: 500px) {
+    .headerContainer {
+        max-width: 100px;
+    }
+
+    .headerContainer > img {
+        display: flex;
+    }
+
+    .headerContainer > .buttons {
+        flex-direction: column;
+    }
+
+    .headerContainer > .buttons > a > button > h2 {
+        display: unset;
+    }
+
+    .headerContainer > .buttons > .selected > button > svg  {
+        font-size: 3rem !important;
+    }
+
+    .headerContainer > .buttons > a > button > svg  {
+        font-size: 3rem !important;
+    }
+}

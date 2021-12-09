@@ -1,0 +1,72 @@
+.registerContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+    gap: 20px;
+    padding: 20px;
+
+    margin-top: 20px;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    border-radius: 16px;
+}
+
+.registerContainer > .fields {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    gap: 10px;
+    overflow: auto;
+}
+
+.registerContainer > .fields > .fieldLine {
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+}
+
+.registerContainer > .fields > .fieldLine > input {
+    border: 1px solid #1E1E24;
+    border-radius: 4px;
+    background-color: #F7EBE8;
+    height: 30px;
+    padding: 0px 14px;
+}
+
+.registerContainer > .fields > .fieldLine > .disabled {
+    opacity: 0.3;
+}
+
+.registerContainer > .fields > .fieldLine > textarea {
+    min-height: 100px;
+    border-radius: 4px;
+    background-color: #F7EBE8;
+    padding: 0px 14px;
+}
+
+.registerContainer > .fields > .fieldLine > .error {
+    border-color: #E54B4B;
+}
+
+.registerContainer > .buttonsLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.registerContainer > .buttonsLine > button {
+    height: 35px;
+    width: 120px;
+    border: 1px solid #E54B4B;
+    background-color: #E54B4B;
+    border-radius: 10px;
+    color: #F7EBE8;
+    cursor: pointer;
+}
+
+.registerContainer > .buttonsLine > button:hover {
+    opacity: 0.8;
+}
