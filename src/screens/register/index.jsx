@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router'
 import ScreenTitle from '../../components/screenTitle/ScreenTitle'
 
@@ -64,10 +64,6 @@ export const Register = () => {
     })
 
     useEffect(() => {
-        fillCep()
-    }, [cep, fillCep])
-
-    const fillCep = () => {
         let validacep = /^[0-9]{8}$/;
 
         if (validacep.test(cep.value)) {
@@ -105,7 +101,7 @@ export const Register = () => {
                 addressDisabledSet(false)
             })
         }
-    }
+    }, [cep])
 
     const validateEmail = (email) => {
         return String(email)

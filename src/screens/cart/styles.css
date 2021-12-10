@@ -1,10 +1,51 @@
 .cartContainer {
     display: flex;
+    flex-direction: column;
     flex: 1;
-    width: 100%;
-    height: 100%;
     overflow: hidden;
-
+    gap: 20px;
     padding: 20px;
+
+    margin-top: 20px;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+    border-radius: 16px;
 }
 
+.cartContainer > h3 {
+    border-bottom: 1px solid black;
+    padding-bottom: 10px;
+}
+
+.cartContainer > .total {
+    display: flex;
+    flex: 1;
+    align-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cartContainer > .total > h2 {
+    text-align: center;
+}
+
+.cartContainer > .buttonsLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cartContainer > .buttonsLine > button {
+    height: 35px;
+    width: 120px;
+    border: 1px solid #E54B4B;
+    background-color: #E54B4B;
+    border-radius: 10px;
+    color: #F7EBE8;
+    cursor: pointer;
+}
+
+.cartContainer > .buttonsLine > button:hover {
+    opacity: 0.8;
+}

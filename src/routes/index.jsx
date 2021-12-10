@@ -10,16 +10,19 @@ import './styles.css'
 
 import { routes } from './routes';
 import Header from '../components/header';
+import { CartContextProvider } from '../contexts/CartContext';
 
 const Router = () => {
     return (
         <BrowserRouter>
             <Header />
-            <Routes>
-                {routes.map(({ path, Component }) => (
-                    <Route key={path} path={path} element={<Component />} />
-                ))}
-            </Routes>
+            <CartContextProvider>
+                <Routes>
+                    {routes.map(({ path, Component }) => (
+                        <Route key={path} path={path} element={<Component />} />
+                    ))}
+                </Routes>
+            </CartContextProvider>
         </BrowserRouter>
     )
 }

@@ -135,10 +135,6 @@
         height: 26vh;
     }
 
-    .homeContainer > .carousel > .item > .text {
-        width: 26vw;
-    }
-
     .homeContainer > .carousel > .item > .text > h3 {
         font-size: 2rem;
     }

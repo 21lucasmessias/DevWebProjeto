@@ -8,10 +8,18 @@ import teso from '../../assets/teso/teso.jpg'
 
 import './styles.css'
 import { betterProducts } from './betterProducts'
+import ProductModal from '../../components/productModal'
 
 export const Home = () => {
     const navigate = useNavigate()
     const [order, orderSet] = useState([0, 1, 2])
+
+    const [modalVisible, modalVisibleSet] = useState(false)
+    const [info, infoSet] = useState({
+        title: '',
+        price: 0,
+        img: null
+    })
 
     useEffect(() => {
         setTimeout(() => {
@@ -56,15 +64,20 @@ export const Home = () => {
                 <h3>Seus jogos favoritos em um só lugar</h3>
 
                 <div className='betterProducts'>
-                    {betterProducts.map(({ name, img }) => {
+                    {betterProducts.map(({ name, img, info }) => {
                         return (
-                            <div key={name} className='image' onClick={() => navigate('/product/' + name)}>
+                            <div key={name} className='image' onClick={() => {
+                                infoSet(info)
+                                modalVisibleSet(true)
+                            }}>
                                 <img src={img} alt={name} />
                             </div>
                         )
                     })}
                 </div>
             </div>
+
+            <ProductModal visible={modalVisible} onClose={() => modalVisibleSet(false)} info={info} />
         </div>
     )
 }
