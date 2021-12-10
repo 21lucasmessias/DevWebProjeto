@@ -36,6 +36,22 @@
     align-items: center;
 }
 
+.cartContainer > .buttonsLine > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+
+.cartContainer > .buttonsLine > div > div > h1 {
+    color: #E54B4B;
+}
+.cartContainer > .buttonsLine > div > div > input {
+    border: 1px solid;
+    border-radius: 8px;
+    background-color: #F7EBE8;
+}
+
 .cartContainer > .buttonsLine > button {
     height: 35px;
     width: 120px;

@@ -18,11 +18,6 @@ export const menus = [
         route: '/cart'
     },
     {
-        name: 'Finish',
-        Icon: Done,
-        route: '/finish'
-    },
-    {
         name: 'Contact',
         Icon: AlternateEmail,
         route: '/contact'

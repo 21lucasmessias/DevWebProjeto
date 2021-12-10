@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router'
 import ScreenTitle from '../../components/screenTitle/ScreenTitle'
 import { CartContext } from '../../contexts/CartContext'
@@ -9,6 +9,8 @@ export const Cart = (props) => {
     const navigate = useNavigate()
 
     const { cart, cartSet } = useContext(CartContext)
+    const [cupom, cupomSet] = useState('')
+    const [discount, discountSet] = useState(1.0)
 
     const confirm = () => {
         alert('Sucessfully buy! Your cart will be clear in 2 seconds')
@@ -17,6 +19,12 @@ export const Cart = (props) => {
             cartSet([])
         }, 2000)
     }
+
+    useEffect(() => {
+        if (cupom === 'UTFPR') {
+            discountSet(0.85)
+        }
+    }, [cupom])
 
     return (
         <div className='mainContainer'>
@@ -43,7 +51,13 @@ export const Cart = (props) => {
                 </div>
 
                 <div className='buttonsLine'>
-                    <h2>{`Total: R$ ${cart.reduce((acc, cur) => acc = acc + cur.price, 0)}`}</h2>
+                    <div>
+                        <h2>{`Total: R$ ${cart.reduce((acc, cur) => acc = acc + cur.price, 0) * discount}`}</h2>
+                        <div>
+                            <h1>Insert your cupom here: </h1>
+                            <input value={cupom} onChange={(e) => cupomSet(e.target.value)}></input>
+                        </div>
+                    </div>
                     <button onClick={confirm}>
                         Confirm
                     </button>

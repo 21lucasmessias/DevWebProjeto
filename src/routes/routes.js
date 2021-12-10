@@ -26,8 +26,4 @@ export const routes = [
         path: '/cart',
         Component: Cart,
     },
-    {
-        path: '/finish',
-        Component: Finish,
-    },
 ]
