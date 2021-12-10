@@ -44,9 +44,12 @@ export const Cart = (props) => {
                 <h3>Verify your itens</h3>
                 <div className='total'>
                     {cart.map((sale, index) => (
-                        <h2 key={`${index}-${sale.title}`}>
-                            {`${sale.title} - R$ ${sale.price}`}
-                        </h2>
+                        <div className='item'>
+                            <h2 key={`${index}-${sale.title}`}>
+                                {`${sale.title} - R$ ${sale.price}`}
+                            </h2>
+                            <button onClick={() => cartSet([...cart.filter((p, idx) => idx != index)])}>Remove item</button>
+                        </div>
                     ))}
                 </div>
 
